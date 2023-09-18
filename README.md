@@ -1,4 +1,4 @@
-# API para cadastro de árvore genealógica
+# API para cadastro de pessoas e data nascimento
 
 Java RESTful API criada para o Bootcamp Santander DIO
 
@@ -12,15 +12,14 @@ classDiagram
         -birthdayDate: String
         -nickname: String
         -partner: String
-        -children: List<Person>
-        +Person(name: String, birthdayDate: String, nickname: String, partner: String, children: List<Person>)
+        -phone: String
+        +Person(name: String, birthdayDate: String, nickname: String, partner: String, phone: String)
         +getName(): String
         +getBirthdayDate(): String
         +getNickname(): String
         +getPartner(): String
-        +getChildren(): List<Person>
+        +getPhone(): String
     }
 
-    Person --> Person : has children
 
 ```
