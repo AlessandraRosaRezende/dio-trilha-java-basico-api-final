@@ -51,10 +51,6 @@ public class PersonServiceImpl implements PersonService {
         this.validateChangeableId(id, "updated");
         Person dbPerson = this.findById(id);
         
-        if (personRepository.existsByName(personToUpdate.getName())) {
-            throw new BusinessException("This person already exists.");
-        }
-
         dbPerson.setName(personToUpdate.getName());
         dbPerson.setBirthday(personToUpdate.getBirthday());
         dbPerson.setNickname(personToUpdate.getNickname());
